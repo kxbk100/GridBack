@@ -23,8 +23,8 @@ period = '12H'  # 多久调仓一次，不建议超过24H
 offset = 3  # offset参数，如果想回测1天，记得填24H，要不然这个参数会有错误
 
 # 选币因子
-# factors = {'涨跌幅': True, '振幅': False}
-factors = {'Sgcz_2': True}
+factors = {'涨跌幅': True, '振幅': False}
+# factors = {'Sgcz_2': True}
 strategy_start = '2021-01-01'  # 回测开始时间
 strategy_end = '2022-08-20'  # 回测结束时间
 grid_price_limit = (0.5, 0.5)  # 最高最低价为指定价格的多少百分比

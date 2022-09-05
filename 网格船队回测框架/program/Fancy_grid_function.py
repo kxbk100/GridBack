@@ -31,14 +31,14 @@ def cal_factor(df):
     # for n in [2, 3, 5, 8, 13]:
     #     df['ma_%s' % n] = df['close'].rolling(n).mean()
     #     df['bias_%s' % n] = df['close'] / df['ma_%s' % n] - 1
-    for n in [2]:
-        for factor in factors:
-            # if check_contain_chinese(factor):
-            #     print('中文')
-            # else:
-            _symbol = factor[:-2]
-            allFactors[_symbol](df, n, 0, _symbol + '_%s' % n)
-            print('计算因子-', _symbol + '_%s' % n)
+    # for n in [2]:
+    #     for factor in factors:
+    #         # if check_contain_chinese(factor):
+    #         #     print('中文')
+    #         # else:
+    #         _symbol = factor[:-2]
+    #         allFactors[_symbol](df, n, 0, _symbol + '_%s' % n)
+    #         print('计算因子-', _symbol + '_%s' % n)
 
     # 判断价格是否在DC通道内
     df['dc_dn'] = df['low'].rolling(20, min_periods=1).min()
